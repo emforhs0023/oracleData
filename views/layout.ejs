@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8" />
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+        <script type="text/javascript" src="/js/axios.js"></script>
+    </head>
+    <body>
+        <div id="wrapper">
+            <header>
+                
+            </header> 
+            <main>
+                <div>위</div>
+                <script>
+                    axios.get("/test").then(v => {
+                        console.log("result ==> ", v)
+                    })
+                    axios.get("/test/data").then(v => {
+                        console.log("result1 ==> ", v)
+                    })
+                </script>
+                <%- body %>
+            </main>
+            <footer>
+                <div class="row">
+                    <!-- footer -->
+                </div>
+            </footer>
+            <%- script %>
+        </div>
+    </body>
+</html>
+
